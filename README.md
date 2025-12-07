@@ -13,24 +13,21 @@ Aplikasi web untuk mendigitalisasi proses administrasi perpustakaan sekolah. Sis
 
 ## Teknologi Utama
 
-⚙️ Frontend
+### Frontend
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20"/> ReactJS – Framework untuk membangun UI modern dan dinamis.
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="20"/> TailwindCSS – Framework CSS untuk styling cepat, responsif, dan konsisten.
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20"/> React Router DOM – Pengelolaan navigasi multi-halaman.
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="20"/> Axios – Komunikasi HTTP antara frontend dan backend.
-
-<img src="https://cdn.simpleicons.org/lucide/000000" width="20"/> Lucide React – Koleksi ikon ringan untuk komponen UI.
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB&style=for-the-badge)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-0F172A?logo=tailwindcss&logoColor=06B6D4&style=for-the-badge)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=reactrouter&logoColor=white&style=for-the-badge)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white&style=for-the-badge)
+![Lucide](https://img.shields.io/badge/Lucide-000000?logo=lucide&logoColor=white&style=for-the-badge)
 
 ### Backend
-- **Node.js** – Lingkungan JavaScript server-side.
-- **ExpressJS** – Framework web minimalis untuk membangun REST API.
-- **MySQL** – Sistem basis data relasional yang stabil dan cepat.
-- **mysql2** – Driver MySQL untuk Node.js.
-- **dotenv / dotenvx** – Manajemen environment variable dan secrets.
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white&style=for-the-badge)
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white&style=for-the-badge)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white&style=for-the-badge)
+![mysql2](https://img.shields.io/badge/mysql2-00618A?style=for-the-badge)
+![dotenv](https://img.shields.io/badge/dotenv-ECD53F?style=for-the-badge)
+
 
 ### Development Tools
 - **Vite** – Alat build cepat dengan pengalaman pengembangan modern.
