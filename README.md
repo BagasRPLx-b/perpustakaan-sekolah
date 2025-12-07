@@ -1,6 +1,4 @@
-Baik! Saya akan **menyusun ulang `README.md` Anda** agar setiap langkah instalasi (dari 1 hingga akhir) **disajikan dalam blok kode terpisah dan jelas**, sehingga tidak memusingkan dan mudah diikuti.
 
-Berikut adalah versi `README.md` yang telah diperbaiki, siap salin-tempel:
 
 ```markdown
 # Perpustakaan Sekolah
