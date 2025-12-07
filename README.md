@@ -1,0 +1,208 @@
+Baik! Saya akan memperbarui `README.md` yang sebelumnya dengan menambahkan informasi tentang **Lucide React** sebagai dependensi frontend.
+
+---
+
+## ✅ `README.md` Lengkap (Termasuk Lucide React)
+
+```markdown
+# Perpustakaan Sekolah
+
+Aplikasi web berbasis web untuk mengelola perpustakaan sekolah secara digital. Aplikasi ini memungkinkan pustakawan mengelola koleksi buku, mencatat peminjaman, mengelola data karyawan, dan melacak aktivitas pengunjung perpustakaan secara real-time.
+
+## Teknologi yang Digunakan
+
+- **Frontend:**
+  - [ReactJS](https://reactjs.org/): Framework JavaScript untuk membangun antarmuka pengguna.
+  - [TailwindCSS](https://tailwindcss.com/): Framework CSS untuk styling yang cepat dan fleksibel.
+  - [React Router DOM](https://reactrouter.com/): Untuk manajemen routing halaman.
+  - [Axios](https://axios-http.com/): Untuk komunikasi HTTP antara frontend dan backend.
+  - [Lucide React](https://lucide.dev/): Library ikon yang ringan dan konsisten untuk digunakan di komponen React.
+- **Backend:**
+  - [Node.js](https://nodejs.org/): Platform server-side JavaScript.
+  - [ExpressJS](https://expressjs.com/): Framework web minimalis untuk Node.js.
+  - [MySQL](https://www.mysql.com/): Sistem manajemen basis data relasional.
+  - [mysql2](https://www.npmjs.com/package/mysql2): Driver MySQL untuk Node.js.
+  - [dotenv](https://www.npmjs.com/package/dotenv): Untuk mengelola variabel lingkungan.
+- **Development Tools:**
+  - [Vite](https://vitejs.dev/): Build tool cepat untuk proyek frontend.
+  - [React Developer Tools](https://react.dev/link/react-devtools): Ekstensi browser untuk debugging komponen React.
+
+## Fitur Aplikasi
+
+- **Manajemen Buku:**
+  - Tambah, edit, hapus data buku (Judul, Pengarang, Penerbit, Tahun, Stok, Lokasi Rak).
+  - Tampilkan daftar buku.
+- **Manajemen Peminjaman:**
+  - Catat peminjaman buku oleh pengunjung (Nama, ID Buku, Tanggal Pinjam, Tanggal Kembali).
+  - Validasi stok buku saat peminjaman.
+  - Update status peminjaman menjadi "Dikembalikan".
+  - Hitung denda otomatis jika terlambat mengembalikan.
+- **Manajemen Karyawan:**
+  - Tambah, edit, hapus data karyawan.
+  - Pilihan jabatan tetap (dropdown).
+  - Batas karakter untuk nomor telepon.
+- **Aktivitas Perpustakaan:**
+  - Catat kedatangan pengunjung (Nama, Keperluan, Catatan).
+  - Update status menjadi "Sudah Pulang".
+  - Tampilkan daftar pengunjung aktif dan riwayat aktivitas.
+- **Tampilan:**
+  - Antarmuka pengguna yang responsif dan menarik menggunakan TailwindCSS.
+  - Navigasi antar halaman menggunakan React Router.
+  - Ikon-ikon intuitif dan konsisten menggunakan Lucide React.
+
+## Struktur Proyek
+
+```
+perpustakaan-sekolah/
+├── frontend/                 # Kode sumber frontend React
+│   ├── public/
+│   ├── src/
+│   │   ├── components/       # Komponen-komponen reusable (misal: Navbar)
+│   │   ├── pages/            # Komponen halaman (misal: Buku, Peminjaman)
+│   │   ├── App.jsx           # Komponen utama
+│   │   ├── main.jsx          # Entry point aplikasi
+│   │   └── input.css         # File CSS untuk Tailwind
+│   ├── package.json          # Dependensi dan skrip frontend
+│   └── tailwind.config.js    # Konfigurasi TailwindCSS
+├── backend/                  # Kode sumber backend Express
+│   ├── routes/
+│   │   ├── buku.js           # Route CRUD buku
+│   │   ├── peminjaman.js     # Route CRUD peminjaman
+│   │   ├── karyawan.js       # Route CRUD karyawan
+│   │   └── aktivitas.js      # Route CRUD aktivitas
+│   ├── config/
+│   │   └── db.js             # Konfigurasi koneksi database
+│   ├── app.js                # File utama server Express
+│   ├── package.json          # Dependensi dan skrip backend
+│   └── .env                  # Variabel lingkungan (harus diatur sendiri)
+├── README.md                 # File dokumentasi ini
+└── .gitignore               # File yang diabaikan oleh Git
+```
+
+## Instalasi Lokal
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal Anda.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/) (versi terbaru)
+- [npm](https://www.npmjs.com/get-npm) atau [yarn](https://yarnpkg.com/getting-started/install) (terinstal bersama Node.js)
+- [MySQL](https://dev.mysql.com/downloads/mysql/) (server database)
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username-anda/perpustakaan-sekolah.git
+cd perpustakaan-sekolah
+```
+
+### 2. Instalasi Dependensi
+
+#### Frontend
+
+Masuk ke folder `frontend` dan instal dependensi:
+
+```bash
+cd frontend
+npm install
+# atau
+yarn install
+```
+
+#### Backend
+
+Buka terminal baru, kembali ke root folder, masuk ke `backend`, dan instal dependensi:
+
+```bash
+cd ../backend # atau buka terminal baru dan navigasi ke folder backend
+npm install
+# atau
+yarn install
+```
+
+### 3. Konfigurasi Database
+
+1. Buat database baru di MySQL Anda, misalnya `perpustakaan_sekolah`.
+2. Jalankan skrip SQL berikut di database tersebut untuk membuat tabel-tabel:
+   - `buku`
+   - `peminjaman`
+   - `anggota` (jika fitur anggota diterapkan)
+   - `karyawan`
+   - `aktivitas`
+   *(Skrip SQL bisa Anda temukan di dokumentasi atau file route masing-masing)*
+
+### 4. Konfigurasi Environment Variable
+
+#### Backend
+
+Di folder `backend`, buat file `.env` berdasarkan `.env.example` (jika ada) atau buat baru:
+
+```env
+PORT=5000
+DB_HOST=localhost
+DB_USER=nama_user_mysql_anda
+DB_PASS=kata_sandi_mysql_anda
+DB_NAME=perpustakaan_sekolah
+```
+
+Pastikan nama user dan password sesuai dengan konfigurasi MySQL Anda.
+
+#### Frontend (Opsional)
+
+Jika Anda perlu mengganti URL backend, Anda bisa membuat file `.env` di folder `frontend`:
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+Lalu ubah semua panggilan `axios` di komponen React untuk menggunakan `import.meta.env.VITE_API_URL` sebagai prefix URL.
+
+### 5. Menjalankan Aplikasi
+
+#### Backend
+
+Dari folder `backend`, jalankan server:
+
+```bash
+node app.js
+# Atau jika menggunakan skrip di package.json:
+npm run dev
+```
+Server akan berjalan di `http://localhost:5000`.
+
+#### Frontend
+
+Dari folder `frontend`, jalankan development server:
+
+```bash
+npm run dev
+# Atau jika menggunakan skrip di package.json:
+yarn dev
+```
+Frontend akan berjalan di `http://localhost:5173` (atau port lain jika 5173 digunakan).
+
+Buka `http://localhost:5173` di browser Anda. Aplikasi seharusnya sekarang terhubung ke backend dan berfungsi sepenuhnya.
+
+## Kontribusi
+
+Kontribusi sangat dianjurkan! Silakan buka *Issues* untuk melaporkan bug atau mengusulkan fitur baru. Untuk kontribusi kode, silakan buat *Pull Request*.
+
+## Lisensi
+
+[MIT](https://choosealicense.com/licenses/mit/)
+```
+
+---
+
+### ✅ Penjelasan Tambahan
+
+- **Lucide React** ditambahkan ke bagian "Frontend" dalam daftar teknologi.
+- Deskripsi singkat tentang fungsinya ditambahkan di bagian "Fitur Aplikasi".
+- Anda mungkin perlu menginstal Lucide React di proyek Anda jika belum:
+  ```bash
+  cd frontend
+  npm install lucide-react
+  ```
+  atau
+  ```bash
+  yarn add lucide-react
+  ```
