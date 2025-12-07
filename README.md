@@ -1,208 +1,429 @@
-Baik! Saya akan memperbarui `README.md` yang sebelumnya dengan menambahkan informasi tentang **Lucide React** sebagai dependensi frontend.
-
----
-
-## ✅ `README.md` Lengkap (Termasuk Lucide React)
 
 ```markdown
-# Perpustakaan Sekolah
+# 🏫 Sistem Manajemen Perpustakaan Sekolah
 
-Aplikasi web berbasis web untuk mengelola perpustakaan sekolah secara digital. Aplikasi ini memungkinkan pustakawan mengelola koleksi buku, mencatat peminjaman, mengelola data karyawan, dan melacak aktivitas pengunjung perpustakaan secara real-time.
+Aplikasi web full-stack untuk mengelola operasional perpustakaan sekolah secara digital dan terintegrasi. Sistem ini dirancang khusus untuk membantu pustakawan dalam mengelola koleksi buku, peminjaman, karyawan, dan aktivitas pengunjung dengan antarmuka yang modern dan user-friendly.
 
-## Teknologi yang Digunakan
+![Sistem Manajemen Perpustakaan](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+![React](https://img.shields.io/badge/React-18.2-blue)
+![Node.js](https://img.shields.io/badge/Node.js-18+-green)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-- **Frontend:**
-  - [ReactJS](https://reactjs.org/): Framework JavaScript untuk membangun antarmuka pengguna.
-  - [TailwindCSS](https://tailwindcss.com/): Framework CSS untuk styling yang cepat dan fleksibel.
-  - [React Router DOM](https://reactrouter.com/): Untuk manajemen routing halaman.
-  - [Axios](https://axios-http.com/): Untuk komunikasi HTTP antara frontend dan backend.
-  - [Lucide React](https://lucide.dev/): Library ikon yang ringan dan konsisten untuk digunakan di komponen React.
-- **Backend:**
-  - [Node.js](https://nodejs.org/): Platform server-side JavaScript.
-  - [ExpressJS](https://expressjs.com/): Framework web minimalis untuk Node.js.
-  - [MySQL](https://www.mysql.com/): Sistem manajemen basis data relasional.
-  - [mysql2](https://www.npmjs.com/package/mysql2): Driver MySQL untuk Node.js.
-  - [dotenv](https://www.npmjs.com/package/dotenv): Untuk mengelola variabel lingkungan.
-- **Development Tools:**
-  - [Vite](https://vitejs.dev/): Build tool cepat untuk proyek frontend.
-  - [React Developer Tools](https://react.dev/link/react-devtools): Ekstensi browser untuk debugging komponen React.
+## ✨ Fitur Utama
 
-## Fitur Aplikasi
+### 📚 **Manajemen Buku**
+- ✅ Tambah, edit, hapus data buku
+- ✅ Pencarian dan filter buku
+- ✅ Monitoring stok buku real-time
+- ✅ Visualisasi data dengan statistik
+- ✅ Badge warna untuk status stok (hijau/kuning/merah)
 
-- **Manajemen Buku:**
-  - Tambah, edit, hapus data buku (Judul, Pengarang, Penerbit, Tahun, Stok, Lokasi Rak).
-  - Tampilkan daftar buku.
-- **Manajemen Peminjaman:**
-  - Catat peminjaman buku oleh pengunjung (Nama, ID Buku, Tanggal Pinjam, Tanggal Kembali).
-  - Validasi stok buku saat peminjaman.
-  - Update status peminjaman menjadi "Dikembalikan".
-  - Hitung denda otomatis jika terlambat mengembalikan.
-- **Manajemen Karyawan:**
-  - Tambah, edit, hapus data karyawan.
-  - Pilihan jabatan tetap (dropdown).
-  - Batas karakter untuk nomor telepon.
-- **Aktivitas Perpustakaan:**
-  - Catat kedatangan pengunjung (Nama, Keperluan, Catatan).
-  - Update status menjadi "Sudah Pulang".
-  - Tampilkan daftar pengunjung aktif dan riwayat aktivitas.
-- **Tampilan:**
-  - Antarmuka pengguna yang responsif dan menarik menggunakan TailwindCSS.
-  - Navigasi antar halaman menggunakan React Router.
-  - Ikon-ikon intuitif dan konsisten menggunakan Lucide React.
+### 🔄 **Manajemen Peminjaman**
+- ✅ Catat peminjaman dengan validasi stok
+- ✅ Sistem denda otomatis untuk keterlambatan
+- ✅ Dashboard statistik peminjaman
+- ✅ Filter berdasarkan status (dipinjam/dikembalikan)
+- ✅ Tracking pengembalian dengan one-click
 
-## Struktur Proyek
+### 👥 **Manajemen Karyawan**
+- ✅ Manajemen data staf perpustakaan
+- ✅ Pilihan jabatan dengan dropdown terstruktur
+- ✅ Perhitungan masa kerja otomatis
+- ✅ Visualisasi distribusi jabatan
+- ✅ Form dengan validasi lengkap
+
+### 📊 **Aktivitas Pengunjung**
+- ✅ Catat kedatangan pengunjung real-time
+- ✅ Monitoring pengunjung aktif
+- ✅ Dashboard aktivitas harian
+- ✅ Statistik keperluan kunjungan
+- ✅ Durasi kunjungan otomatis
+
+## 🛠️ Teknologi yang Digunakan
+
+### **Frontend:**
+- **React 18** - UI Library
+- **TailwindCSS** - Styling Framework
+- **React Router DOM** - Navigation
+- **Axios** - HTTP Client
+- **Lucide React** - Icon Library
+
+### **Backend:**
+- **Node.js** - Runtime Environment
+- **Express.js** - Web Framework
+- **MySQL** - Database
+- **mysql2** - Database Driver
+- **CORS** - Cross-Origin Resource Sharing
+
+### **Development Tools:**
+- **Vite** - Build Tool & Dev Server
+- **Postman** - API Testing
+- **Git** - Version Control
+- **ESLint** - Code Linting
+
+## 📁 Struktur Proyek
 
 ```
 perpustakaan-sekolah/
-├── frontend/                 # Kode sumber frontend React
-│   ├── public/
+├── frontend/                 # React Application
 │   ├── src/
-│   │   ├── components/       # Komponen-komponen reusable (misal: Navbar)
-│   │   ├── pages/            # Komponen halaman (misal: Buku, Peminjaman)
-│   │   ├── App.jsx           # Komponen utama
-│   │   ├── main.jsx          # Entry point aplikasi
-│   │   └── input.css         # File CSS untuk Tailwind
-│   ├── package.json          # Dependensi dan skrip frontend
-│   └── tailwind.config.js    # Konfigurasi TailwindCSS
-├── backend/                  # Kode sumber backend Express
+│   │   ├── components/       # Reusable Components
+│   │   │   └── Navbar.jsx    # Navigation Component
+│   │   ├── pages/           # Page Components
+│   │   │   ├── App.jsx      # Main Book Management
+│   │   │   ├── Peminjaman.jsx
+│   │   │   ├── Karyawan.jsx
+│   │   │   └── Aktivitas.jsx
+│   │   ├── App.css          # Global Styles
+│   │   └── main.jsx         # Application Entry
+│   ├── package.json
+│   └── vite.config.js
+├── backend/                  # Express.js Server
 │   ├── routes/
-│   │   ├── buku.js           # Route CRUD buku
-│   │   ├── peminjaman.js     # Route CRUD peminjaman
-│   │   ├── karyawan.js       # Route CRUD karyawan
-│   │   └── aktivitas.js      # Route CRUD aktivitas
+│   │   ├── buku.js          # Book Routes
+│   │   ├── peminjaman.js    # Loan Routes
+│   │   ├── karyawan.js      # Employee Routes
+│   │   └── aktivitas.js     # Activity Routes
 │   ├── config/
-│   │   └── db.js             # Konfigurasi koneksi database
-│   ├── app.js                # File utama server Express
-│   ├── package.json          # Dependensi dan skrip backend
-│   └── .env                  # Variabel lingkungan (harus diatur sendiri)
-├── README.md                 # File dokumentasi ini
-└── .gitignore               # File yang diabaikan oleh Git
+│   │   └── db.js           # Database Configuration
+│   ├── app.js              # Main Server File
+│   └── package.json
+└── README.md               # This Documentation
 ```
 
-## Instalasi Lokal
+## 🚀 Instalasi dan Setup
 
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal Anda.
+### **Prerequisites:**
+- Node.js (v18 atau lebih baru)
+- MySQL (v8.0 atau lebih baru)
+- npm atau yarn
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/en/download/) (versi terbaru)
-- [npm](https://www.npmjs.com/get-npm) atau [yarn](https://yarnpkg.com/getting-started/install) (terinstal bersama Node.js)
-- [MySQL](https://dev.mysql.com/downloads/mysql/) (server database)
-
-### 1. Clone Repository
-
+### **Langkah 1: Clone Repository**
 ```bash
-git clone https://github.com/username-anda/perpustakaan-sekolah.git
+git clone https://github.com/yourusername/perpustakaan-sekolah.git
 cd perpustakaan-sekolah
 ```
 
-### 2. Instalasi Dependensi
-
-#### Frontend
-
-Masuk ke folder `frontend` dan instal dependensi:
-
-```bash
-cd frontend
-npm install
-# atau
-yarn install
+### **Langkah 2: Setup Database**
+1. Buat database MySQL:
+```sql
+CREATE DATABASE perpustakaan_sekolah;
 ```
 
-#### Backend
+2. Jalankan skrip SQL berikut:
+```sql
+-- Tabel Buku
+CREATE TABLE buku (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    judul VARCHAR(200) NOT NULL,
+    pengarang VARCHAR(100),
+    penerbit VARCHAR(100),
+    tahun_terbit INT,
+    jumlah_stok INT NOT NULL DEFAULT 0,
+    lokasi_rak VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
-Buka terminal baru, kembali ke root folder, masuk ke `backend`, dan instal dependensi:
+-- Tabel Peminjaman
+CREATE TABLE peminjaman (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_peminjam VARCHAR(100) NOT NULL,
+    buku_id INT NOT NULL,
+    judul_buku VARCHAR(200),
+    tgl_pinjam DATE NOT NULL,
+    tgl_kembali DATE NOT NULL,
+    status ENUM('dipinjam', 'dikembalikan') DEFAULT 'dipinjam',
+    denda DECIMAL(10, 2) DEFAULT 0.00,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (buku_id) REFERENCES buku(id) ON DELETE CASCADE
+);
 
-```bash
-cd ../backend # atau buka terminal baru dan navigasi ke folder backend
-npm install
-# atau
-yarn install
+-- Tabel Karyawan
+CREATE TABLE karyawan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    jabatan VARCHAR(50) NOT NULL,
+    no_telepon VARCHAR(15),
+    email VARCHAR(100),
+    tgl_masuk DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Tabel Aktivitas
+CREATE TABLE aktivitas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_pengunjung VARCHAR(100) NOT NULL,
+    keperluan VARCHAR(50) NOT NULL,
+    catatan TEXT,
+    waktu_masuk TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    waktu_pulang TIMESTAMP NULL,
+    status ENUM('Masih di Perpus', 'Sudah Pulang') DEFAULT 'Masih di Perpus',
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 ```
 
-### 3. Konfigurasi Database
+### **Langkah 3: Setup Backend**
+```bash
+cd backend
+npm install
+```
 
-1. Buat database baru di MySQL Anda, misalnya `perpustakaan_sekolah`.
-2. Jalankan skrip SQL berikut di database tersebut untuk membuat tabel-tabel:
-   - `buku`
-   - `peminjaman`
-   - `anggota` (jika fitur anggota diterapkan)
-   - `karyawan`
-   - `aktivitas`
-   *(Skrip SQL bisa Anda temukan di dokumentasi atau file route masing-masing)*
-
-### 4. Konfigurasi Environment Variable
-
-#### Backend
-
-Di folder `backend`, buat file `.env` berdasarkan `.env.example` (jika ada) atau buat baru:
-
+Buat file `.env`:
 ```env
 PORT=5000
 DB_HOST=localhost
-DB_USER=nama_user_mysql_anda
-DB_PASS=kata_sandi_mysql_anda
+DB_USER=root
+DB_PASSWORD=yourpassword
 DB_NAME=perpustakaan_sekolah
 ```
 
-Pastikan nama user dan password sesuai dengan konfigurasi MySQL Anda.
+### **Langkah 4: Setup Frontend**
+```bash
+cd ../frontend
+npm install
+```
 
-#### Frontend (Opsional)
+### **Langkah 5: Jalankan Aplikasi**
+**Backend:**
+```bash
+cd backend
+npm start
+```
+Server berjalan di `http://localhost:5000`
 
-Jika Anda perlu mengganti URL backend, Anda bisa membuat file `.env` di folder `frontend`:
+**Frontend:**
+```bash
+cd frontend
+npm run dev
+```
+Aplikasi berjalan di `http://localhost:5173`
 
+## 📱 Halaman dan Fitur
+
+### **1. Dashboard Buku (`/`)**
+- **Form Tambah Buku**: Input lengkap data buku
+- **Daftar Buku**: Tabel dengan edit inline
+- **Search & Filter**: Pencarian real-time
+- **Stats Cards**: Total buku, stok, rak, status
+
+### **2. Manajemen Peminjaman (`/peminjaman`)**
+- **Form Peminjaman**: Dengan validasi stok
+- **Denda Otomatis**: Rp 2.000/hari keterlambatan
+- **Pengembalian**: One-click return system
+- **Dashboard**: Statistik peminjaman
+
+### **3. Manajemen Karyawan (`/karyawan`)**
+- **Form Karyawan**: Data lengkap dengan email
+- **Dropdown Jabatan**: 8 pilihan jabatan
+- **Masa Kerja**: Perhitungan otomatis
+- **Distribusi**: Visualisasi per jabatan
+
+### **4. Aktivitas Pengunjung (`/aktivitas`)**
+- **Catat Kedatangan**: Form dengan keperluan
+- **Pengunjung Aktif**: Monitoring real-time
+- **Riwayat**: Filter berdasarkan tanggal/status
+- **Analytics**: Statistik keperluan kunjungan
+
+## 🔧 API Endpoints
+
+### **Buku**
+```
+GET    /api/buku           # Get all books
+GET    /api/buku/:id       # Get single book
+POST   /api/buku           # Create new book
+PUT    /api/buku/:id       # Update book
+DELETE /api/buku/:id       # Delete book
+```
+
+### **Peminjaman**
+```
+GET    /api/peminjaman              # Get all loans
+POST   /api/peminjaman              # Create new loan
+PUT    /api/peminjaman/:id/status   # Update loan status
+GET    /api/peminjaman/aktif        # Get active loans
+```
+
+### **Karyawan**
+```
+GET    /api/karyawan       # Get all employees
+POST   /api/karyawan       # Add new employee
+PUT    /api/karyawan/:id   # Update employee
+DELETE /api/karyawan/:id   # Delete employee
+```
+
+### **Aktivitas**
+```
+GET    /api/aktivitas              # Get all activities
+GET    /api/aktivitas/aktif        # Get active visitors
+POST   /api/aktivitas              # Record new activity
+PUT    /api/aktivitas/:id/pulang   # Mark as returned
+```
+
+## 🎨 UI/UX Features
+
+### **Design System:**
+- **Gradient Backgrounds**: Profesional dan modern
+- **Card-based Layout**: Rapi dan terorganisir
+- **Consistent Color Scheme**: Biru sebagai warna utama
+- **Responsive Design**: Optimal di semua device
+
+### **User Experience:**
+- **Real-time Search**: Filter data secara instan
+- **Inline Editing**: Edit data tanpa pindah halaman
+- **Loading States**: Feedback visual untuk proses
+- **Empty States**: UI yang informatif saat kosong
+- **Confirmation Dialogs**: Mencegah aksi tidak sengaja
+
+### **Visual Indicators:**
+- **Status Badges**: Warna berbeda untuk setiap status
+- **Progress Bars**: Visualisasi data persentase
+- **Icons**: Menggunakan Lucide React konsisten
+- **Animations**: Transisi halus untuk interaksi
+
+## 🚀 Deployment
+
+### **Backend (Railway/Heroku):**
+```bash
+# Build dan deploy backend
+cd backend
+git push heroku main
+```
+
+### **Frontend (Vercel/Netlify):**
+```bash
+# Build frontend
+cd frontend
+npm run build
+
+# Deploy build folder ke hosting
+```
+
+### **Environment Variables Production:**
 ```env
-VITE_API_URL=http://localhost:5000/api
+# Backend
+NODE_ENV=production
+DATABASE_URL=mysql://user:pass@host:port/dbname
+PORT=3000
+
+# Frontend
+VITE_API_URL=https://your-backend-api.com
 ```
-Lalu ubah semua panggilan `axios` di komponen React untuk menggunakan `import.meta.env.VITE_API_URL` sebagai prefix URL.
 
-### 5. Menjalankan Aplikasi
+## 📊 Database Schema Diagram
 
-#### Backend
+```
+┌─────────────┐      ┌──────────────┐
+│    BUKU     │      │  PEMINJAMAN  │
+├─────────────┤      ├──────────────┤
+│ id          │◄─────┤ buku_id      │
+│ judul       │      │ nama_peminjam│
+│ pengarang   │      │ tgl_pinjam   │
+│ stok        │      │ status       │
+│ rak         │      │ denda        │
+└─────────────┘      └──────────────┘
 
-Dari folder `backend`, jalankan server:
+┌─────────────┐      ┌──────────────┐
+│  KARYAWAN   │      │  AKTIVITAS   │
+├─────────────┤      ├──────────────┤
+│ id          │      │ id           │
+│ nama        │      │ pengunjung   │
+│ jabatan     │      │ keperluan    │
+│ telepon     │      │ waktu_masuk  │
+│ tgl_masuk   │      │ status       │
+└─────────────┘      └──────────────┘
+```
 
+## 🔐 Keamanan
+
+### **Best Practices:**
+- **Input Validation**: Validasi di frontend dan backend
+- **SQL Injection Protection**: Menggunakan parameterized queries
+- **CORS Configuration**: Restrict origins jika diperlukan
+- **Error Handling**: Tidak menampilkan error detail ke client
+
+### **Authentication (Future Enhancement):**
+```javascript
+// Rencana implementasi login
+// - JWT based authentication
+// - Role-based access control (Admin/Staff)
+// - Session management
+```
+
+## 🧪 Testing
+
+### **Manual Testing:**
+- [ ] CRUD operations semua modul
+- [ ] Form validations
+- [ ] Error handling
+- [ ] Responsive design
+- [ ] Cross-browser compatibility
+
+### **Automated Testing (Future):**
 ```bash
-node app.js
-# Atau jika menggunakan skrip di package.json:
-npm run dev
+# Unit tests
+npm test
+
+# Integration tests
+npm run test:integration
+
+# E2E tests with Cypress
+npm run cypress:open
 ```
-Server akan berjalan di `http://localhost:5000`.
 
-#### Frontend
+## 🤝 Kontribusi
 
-Dari folder `frontend`, jalankan development server:
+Kontribusi sangat diterima! Silakan ikuti langkah-langkah berikut:
 
-```bash
-npm run dev
-# Atau jika menggunakan skrip di package.json:
-yarn dev
-```
-Frontend akan berjalan di `http://localhost:5173` (atau port lain jika 5173 digunakan).
+1. Fork repository
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buka Pull Request
 
-Buka `http://localhost:5173` di browser Anda. Aplikasi seharusnya sekarang terhubung ke backend dan berfungsi sepenuhnya.
+### **Guidelines:**
+- Ikuti struktur kode yang ada
+- Gunakan komponen yang reusable
+- Tambahkan dokumentasi untuk fitur baru
+- Test perubahan sebelum submit
 
-## Kontribusi
+## 📝 Changelog
 
-Kontribusi sangat dianjurkan! Silakan buka *Issues* untuk melaporkan bug atau mengusulkan fitur baru. Untuk kontribusi kode, silakan buat *Pull Request*.
+### **v1.0.0 - Initial Release**
+- ✅ Manajemen buku lengkap
+- ✅ Sistem peminjaman dengan denda
+- ✅ Manajemen karyawan
+- ✅ Tracking aktivitas pengunjung
+- ✅ UI/UX modern dengan TailwindCSS
+- ✅ Responsive design
 
-## Lisensi
+### **v1.1.0 - Planned Features**
+- [ ] Export data ke Excel/PDF
+- [ ] Notifikasi email untuk denda
+- [ ] QR Code untuk buku
+- [ ] Laporan statistik bulanan
+- [ ] Multi-user dengan roles
 
-[MIT](https://choosealicense.com/licenses/mit/)
-```
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah **MIT License** - lihat file [LICENSE](LICENSE) untuk detail.
+
+## 🙏 Acknowledgments
+
+- **TailwindCSS** untuk framework styling yang luar biasa
+- **Lucide** untuk koleksi ikon yang konsisten
+- **React Community** untuk ekosistem yang solid
+- **All Contributors** yang membantu pengembangan
 
 ---
 
-### ✅ Penjelasan Tambahan
+<div align="center">
+  
+**Dibuat dengan ❤️ untuk Perpustakaan Sekolah**
 
-- **Lucide React** ditambahkan ke bagian "Frontend" dalam daftar teknologi.
-- Deskripsi singkat tentang fungsinya ditambahkan di bagian "Fitur Aplikasi".
-- Anda mungkin perlu menginstal Lucide React di proyek Anda jika belum:
-  ```bash
-  cd frontend
-  npm install lucide-react
-  ```
-  atau
-  ```bash
-  yarn add lucide-react
-  ```
+"Transformasi Digital untuk Pendidikan yang Lebih Baik"
+
+</div>
+```
