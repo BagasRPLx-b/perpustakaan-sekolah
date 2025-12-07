@@ -69,34 +69,32 @@ Aplikasi web untuk mendigitalisasi proses administrasi perpustakaan sekolah. Sis
 
 ## Struktur Direktori
 
-```
-
 perpustakaan-sekolah/
 ├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── input.css
-│   ├── package.json
-│   └── tailwind.config.js
+│ ├── public/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ ├── main.jsx
+│ │ └── input.css
+│ ├── package.json
+│ └── tailwind.config.js
 ├── backend/
-│   ├── routes/
-│   │   ├── buku.js
-│   │   ├── peminjaman.js
-│   │   ├── karyawan.js
-│   │   └── aktivitas.js
-│   ├── config/
-│   │   └── db.js
-│   ├── app.js
-│   ├── package.json
-│   └── .env
+│ ├── routes/
+│ │ ├── buku.js
+│ │ ├── peminjaman.js
+│ │ ├── karyawan.js
+│ │ └── aktivitas.js
+│ ├── config/
+│ │ └── db.js
+│ ├── app.js
+│ ├── package.json
+│ └── .env
 ├── README.md
 └── .gitignore
 
-````
+
 
 ---
 
