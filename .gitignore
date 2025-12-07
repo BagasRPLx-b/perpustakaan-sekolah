@@ -1,0 +1,20 @@
+# File .env (penting untuk keamanan!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Folder node_modules (akan diinstall ulang oleh npm install)
+node_modules/
+
+# Folder build (akan dibuat saat deploy)
+frontend/dist/
+backend/dist/
+
+# Cache dan file sementara
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
