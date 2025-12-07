@@ -13,12 +13,17 @@ Aplikasi web untuk mendigitalisasi proses administrasi perpustakaan sekolah. Sis
 
 ## Teknologi Utama
 
-### Frontend
-- **ReactJS** – Framework untuk membangun UI modern dan dinamis.
-- **TailwindCSS** – Framework CSS untuk styling cepat, responsif, dan konsisten.
-- **React Router DOM** – Pengelolaan navigasi multi-halaman.
-- **Axios** – Komunikasi HTTP antara frontend dan backend.
-- **Lucide React** – Koleksi ikon ringan untuk komponen UI.
+⚙️ Frontend
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20"/> ReactJS – Framework untuk membangun UI modern dan dinamis.
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="20"/> TailwindCSS – Framework CSS untuk styling cepat, responsif, dan konsisten.
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20"/> React Router DOM – Pengelolaan navigasi multi-halaman.
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-plain.svg" width="20"/> Axios – Komunikasi HTTP antara frontend dan backend.
+
+<img src="https://cdn.simpleicons.org/lucide/000000" width="20"/> Lucide React – Koleksi ikon ringan untuk komponen UI.
 
 ### Backend
 - **Node.js** – Lingkungan JavaScript server-side.
