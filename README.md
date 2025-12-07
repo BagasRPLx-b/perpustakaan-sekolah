@@ -82,11 +82,10 @@ Ikuti langkah-langkah berikut untuk menjalankan proyek ini di mesin lokal Anda.
 
 ### 1. Clone Repository
 
-```bash
 git clone https://github.com/username-anda/perpustakaan-sekolah.git
 cd perpustakaan-sekolah
 
-2. Instalasi Dependensi
+### 2. Instalasi Dependensi
 Frontend
 Masuk ke folder frontend dan instal dependensi:
 
