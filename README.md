@@ -50,29 +50,29 @@ Aplikasi web berbasis web untuk mengelola perpustakaan sekolah secara digital. A
 
 ```
 perpustakaan-sekolah/
-├── frontend/                 # Kode sumber frontend React
-│   ├── public/
-│   ├── src/
-│   │   ├── components/       # Komponen-komponen reusable (misal: Navbar)
-│   │   ├── pages/            # Komponen halaman (misal: Buku, Peminjaman)
-│   │   ├── App.jsx           # Komponen utama
-│   │   ├── main.jsx          # Entry point aplikasi
-│   │   └── input.css         # File CSS untuk Tailwind
-│   ├── package.json          # Dependensi dan skrip frontend
-│   └── tailwind.config.js    # Konfigurasi TailwindCSS
-├── backend/                  # Kode sumber backend Express
-│   ├── routes/
-│   │   ├── buku.js           # Route CRUD buku
-│   │   ├── peminjaman.js     # Route CRUD peminjaman
-│   │   ├── karyawan.js       # Route CRUD karyawan
-│   │   └── aktivitas.js      # Route CRUD aktivitas
-│   ├── config/
-│   │   └── db.js             # Konfigurasi koneksi database
-│   ├── app.js                # File utama server Express
-│   ├── package.json          # Dependensi dan skrip backend
-│   └── .env                  # Variabel lingkungan (harus diatur sendiri)
-├── README.md                 # File dokumentasi ini
-└── .gitignore               # File yang diabaikan oleh Git
+├── frontend/ # Kode sumber frontend React
+│ ├── public/
+│ ├── src/
+│ │ ├── components/ # Komponen-komponen reusable (misal: Navbar)
+│ │ ├── pages/ # Komponen halaman (misal: Buku, Peminjaman)
+│ │ ├── App.jsx # Komponen utama
+│ │ ├── main.jsx # Entry point aplikasi
+│ │ └── input.css # File CSS untuk Tailwind
+│ ├── package.json # Dependensi dan skrip frontend
+│ └── tailwind.config.js # Konfigurasi TailwindCSS
+├── backend/ # Kode sumber backend Express
+│ ├── routes/
+│ │ ├── buku.js # Route CRUD buku
+│ │ ├── peminjaman.js # Route CRUD peminjaman
+│ │ ├── karyawan.js # Route CRUD karyawan
+│ │ └── aktivitas.js # Route CRUD aktivitas
+│ ├── config/
+│ │ └── db.js # Konfigurasi koneksi database
+│ ├── app.js # File utama server Express
+│ ├── package.json # Dependensi dan skrip backend
+│ └── .env # Variabel lingkungan (harus diatur sendiri)
+├── README.md # File dokumentasi ini
+└── .gitignore # File yang diabaikan oleh Git
 ```
 
 ## Instalasi Lokal
