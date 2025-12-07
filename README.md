@@ -61,7 +61,6 @@ Aplikasi web untuk mendigitalisasi proses administrasi perpustakaan sekolah. Sis
 - Navigasi mudah melalui React Router.
 - Ikon konsisten dengan Lucide React.
 
----
 
 ## Struktur Direktori
 
@@ -90,9 +89,6 @@ perpustakaan-sekolah/
 ├── README.md
 └── .gitignore
 
-
-
----
 
 ## Instalasi dan Konfigurasi
 
